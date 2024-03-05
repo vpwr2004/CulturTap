@@ -5,7 +5,11 @@ import linkedin from '../../assets/footer/linkedin.svg';
 import instagram from '../../assets/footer/insta.svg';
 import playStore from '../../assets/footer/playStore.svg';
 import appStore from '../../assets/footer/appStore.svg';
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
+
+
     return (
         <div className='w-screen flex justify-between pl-[150px] pr-[150px] mt-[50px] pb-[30px] pt-[30px] bg-[#f5f5f5]'>
             <div className='w-1/2 flex justify-between'>
@@ -16,7 +20,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <p className='text-[#2e2c43] font-bold'>Help Center</p>
-                    <p>Report Concern <br /> Contact Us</p>
+                    <p className='flex flex-col '><Link to='/contact/report'> Report Concern </Link> <Link to='/contact'>Contact Us</Link> </p>
                     <p className='mt-[15px] font-bold text-[#2e2c43]'>Careers</p>
                     <p>Open Opportunities</p>
                 </div>
