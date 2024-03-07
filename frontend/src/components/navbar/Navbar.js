@@ -14,7 +14,7 @@ const Navbar = () => {
     const location = useLocation();
     useEffect(() => {
         setUpdatedURL(location.pathname);
-        console.log('updated URL: ' + updatedURL);
+        // console.log('updated URL: ' + updatedURL);
     }, [location]);
 
 
@@ -32,7 +32,7 @@ const Navbar = () => {
             setCurrPage("home");
 
         }
-        console.log('url', currPage);
+        // console.log('url', currPage);
 
     }, [updatedURL]);
 

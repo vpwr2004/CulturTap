@@ -159,13 +159,13 @@ const Home = () => {
         return () => {
             contentRef?.current?.removeEventListener('scroll', handleScroll);
         };
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <div className='w-screen mt-[60px]'>
             <div className='flex ml-[197px] mr-[150px] gap-[71px] overflow-x-scroll scrollbar-hidden' ref={contentRef}>
                 {scroller.map((item, index) => (
-                    <div key={index} className={`w-[545px] h-[423px] rounded-2xl flex-shrink-0 shadow-slate-600 shadow-sm hover:shadow-slate-500 hover:shadow-md m-2 mb-10 ${activeIndex === index ? 'active' : ''}`}>
+                    <div key={index} className={`w-[545px] h-[423px] rounded-2xl flex-shrink-0 shadow-slate-600 shadow-sm  m-2 mb-10 ${activeIndex === index ? 'active' : ''}`}>
                         <div className='w-full flex justify-center pt-[18px]'>
                             <img src={item.link} alt="scrollers" width="340px" height="250px" loading='lazy' />
                         </div>
@@ -174,7 +174,6 @@ const Home = () => {
                 ))}
             </div>
             <div className="bullet-points">
-                {/* Render bullet points */}
                 {scroller.map((item, index) => (
                     <div
                         key={item.id}
