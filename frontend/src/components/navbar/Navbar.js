@@ -45,19 +45,19 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='w-[840px] flex justify-around text-[#2f2341] text-[16px]'>
-                <div className='w-full flex pt-[65px]'>
+                <div className='w-full flex pt-[65px] gap-[40px]'>
 
 
-                    <div className='w-[117px]'>
+                    <div className='w-[max-content]'>
                         <Link to='/' className={`${currPage === "home" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>Home</Link>
                     </div>
-                    <div className='w-[117px]'>
+                    <div className='w-[max-content]'>
                         <Link to='/about' className={`${currPage === "about" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>About Us</Link>
                     </div>
-                    <div className='w-[117px]'>
+                    <div className='w-[max-content]'>
                         <Link to='/earn' className={`${currPage === "earn" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>Earn with us</Link>
                     </div>
-                    <div className='w-[117px]'>
+                    <div className='w-[max-content]'>
                         <Link to='/contact' className={`${currPage === "contact" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>Contact Us</Link>
                     </div>
                 </div>
