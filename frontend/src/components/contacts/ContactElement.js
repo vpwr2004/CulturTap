@@ -15,7 +15,7 @@ const ContactElement = ({ details }) => {
     }
 
     return (
-        <div className='ml-[150px] mt-[66px]'>
+        <div className='ml-[180px] mt-[66px]'>
             <div>
                 <h2 className='text-[40px] text-[2e2c43] font-bold'>{details.type}</h2>
                 <p className='text-[16px] text-[#001b33]'>{details.title}</p>

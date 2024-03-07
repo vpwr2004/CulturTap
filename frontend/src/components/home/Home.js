@@ -198,7 +198,7 @@ const Home = () => {
                 <div className='text-[16px]'>Explore the culture of your next destination</div>
             </div>
 
-            <div className='w-screen flex flex-wrap pl-[160px] gap-[20px] mt-10'>
+            <div className='w-screen flex flex-wrap pl-[180px] gap-[20px] mt-10'>
                 {
                     locations.map((item, index) => (
                         <div key={item.id} className='rounded-xl'>

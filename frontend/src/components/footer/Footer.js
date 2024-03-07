@@ -11,7 +11,7 @@ const Footer = () => {
 
 
     return (
-        <div className='w-screen flex justify-between pl-[150px] pr-[150px] mt-[50px] pb-[30px] pt-[30px] bg-[#f5f5f5]'>
+        <div className='w-screen flex justify-between pl-[180px] pr-[150px] mt-[50px] pb-[30px] pt-[30px] bg-[#f5f5f5]'>
             <div className='w-1/2 flex justify-between'>
                 <div>
                     <p>@2024 All rights reserved to <br /> CulturTap Tourism Indai Pvt. Ltd.</p>

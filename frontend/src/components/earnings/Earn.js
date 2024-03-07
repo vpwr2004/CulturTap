@@ -4,7 +4,7 @@ import earning2 from '../../assets/earnings/earning2.svg';
 
 const Earn = () => {
     return (
-        <div className='ml-[150px] mt-[60px]'>
+        <div className='ml-[180px] mt-[60px]'>
             <div>
                 <h2 className='text-[40px] text-[#2e2c43] font-bold'>Earn with us!</h2>
                 <p>Help others to start your earnings.  </p>

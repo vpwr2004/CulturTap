@@ -1,11 +1,50 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import logo from '../../assets/navbar/culturTap logo.svg';
 import appStore from '../../assets/navbar/appStore.svg';
 import playStore from '../../assets/navbar/playStore.svg';
 import culturTapName from '../../assets/Home/culturtap.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+    // const currentURL = window.location.href;
+    const [currPage, setCurrPage] = useState("home");
+    const currentURLRef = useRef(window.location.href);
+    const [updatedURL, setUpdatedURL] = useState(window.location.href);
+
+    const currURL = useLocation();
+    // useEffect(() => {
+    //     const handleURLChange = () => {
+    //         setUpdatedURL(window.location.href);
+    //         currentURLRef.current = window.location.href;
+    //     };
+
+    //     // Add event listener for URL changes
+    //     window.addEventListener('popstate', handleURLChange);
+
+    //     return () => {
+    //         // Cleanup by removing event listener
+    //         window.removeEventListener('popstate', handleURLChange);
+    //     };
+    // }, []);
+
+    useEffect(() => {
+        if (updatedURL.includes('about')) {
+            setCurrPage("about");
+        }
+        else if (updatedURL.includes('earn')) {
+            setCurrPage("earn");
+        }
+        else if (updatedURL.includes('contact')) {
+            setCurrPage("contact");
+        }
+        else {
+            setCurrPage("home");
+
+        }
+        console.log('url', currPage);
+
+    }, [currURL]);
+
     return (
         <div className='w-screen flex justify-between gap-10'>
             <div className='pt-[14px] pl-[14px] relative '>
@@ -19,7 +58,7 @@ const Navbar = () => {
 
 
                     <div className='w-[117px]'>
-                        <Link to='/'>Home</Link>
+                        <Link to='/' className={`${currPage === "home" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>Home</Link>
                     </div>
                     <div className='w-[117px]'>
                         <Link to='/about'>About Us</Link>
