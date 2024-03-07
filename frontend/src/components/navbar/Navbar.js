@@ -11,21 +11,12 @@ const Navbar = () => {
     const currentURLRef = useRef(window.location.href);
     const [updatedURL, setUpdatedURL] = useState(window.location.href);
 
-    const currURL = useLocation();
-    // useEffect(() => {
-    //     const handleURLChange = () => {
-    //         setUpdatedURL(window.location.href);
-    //         currentURLRef.current = window.location.href;
-    //     };
+    const location = useLocation();
+    useEffect(() => {
+        setUpdatedURL(location.pathname);
+        console.log('updated URL: ' + updatedURL);
+    }, [location]);
 
-    //     // Add event listener for URL changes
-    //     window.addEventListener('popstate', handleURLChange);
-
-    //     return () => {
-    //         // Cleanup by removing event listener
-    //         window.removeEventListener('popstate', handleURLChange);
-    //     };
-    // }, []);
 
     useEffect(() => {
         if (updatedURL.includes('about')) {
@@ -43,7 +34,7 @@ const Navbar = () => {
         }
         console.log('url', currPage);
 
-    }, [currURL]);
+    }, [updatedURL]);
 
     return (
         <div className='w-screen flex justify-between gap-10'>
@@ -61,13 +52,13 @@ const Navbar = () => {
                         <Link to='/' className={`${currPage === "home" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>Home</Link>
                     </div>
                     <div className='w-[117px]'>
-                        <Link to='/about'>About Us</Link>
+                        <Link to='/about' className={`${currPage === "about" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>About Us</Link>
                     </div>
                     <div className='w-[117px]'>
-                        <Link to='/earn'>Earn with us</Link>
+                        <Link to='/earn' className={`${currPage === "earn" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>Earn with us</Link>
                     </div>
                     <div className='w-[117px]'>
-                        <Link to='/contact'>Contact Us</Link>
+                        <Link to='/contact' className={`${currPage === "contact" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>Contact Us</Link>
                     </div>
                 </div>
                 <div className='w-full flex '>
