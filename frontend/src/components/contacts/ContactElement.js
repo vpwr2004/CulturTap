@@ -15,14 +15,14 @@ const ContactElement = ({ details }) => {
     }
 
     return (
-        <div className='ml-[180px] mt-[66px]'>
+        <div className='max-lg:pl-[20px] lg:ml-[180px] mt-[66px]'>
             <div>
                 <h2 className='text-[40px] text-[2e2c43] font-bold'>{details.type}</h2>
                 <p className='text-[16px] text-[#001b33]'>{details.title}</p>
             </div>
 
-            <div className='mt-[69px] flex gap-[150px] '>
-                <form action="" className='flex flex-col gap-6'>
+            <div className='mt-[69px] flex max-lg:justify-center  md:gap-[150px] '>
+                <form action="" className='flex flex-col items-center gap-6'>
                     <div>
                         <p className='text-[14px] text-[#2e2c43] pl-4 pb-2'>Name</p>
                         <input type="text"
@@ -30,7 +30,7 @@ const ContactElement = ({ details }) => {
                             value={data.name}
                             onChange={() => HandleChange}
                             required
-                            className='w-[381px] h-[54px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] text-[#dbcdbb]'
+                            className='w-[350px] h-[54px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] text-[#dbcdbb]'
                         />
                     </div>
                     <div className='flex gap-[16px]'>
@@ -41,7 +41,7 @@ const ContactElement = ({ details }) => {
                                 value={data.countryCode}
                                 onChange={() => HandleChange}
                                 required
-                                className='w-[122px] h-[54px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] text-[#dbcdbb]'
+                                className='w-[104px] h-[54px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] text-[#dbcdbb]'
                             />
                         </div>
                         <div>
@@ -51,7 +51,7 @@ const ContactElement = ({ details }) => {
                                 value={data.mobileNo}
                                 onChange={() => HandleChange}
                                 required
-                                className='w-[244px] h-[54px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] text-[#dbcdbb]'
+                                className='w-[230px] h-[54px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] text-[#dbcdbb]'
                             />
                         </div>
                     </div>
@@ -62,7 +62,7 @@ const ContactElement = ({ details }) => {
                             value={data.email}
                             onChange={() => HandleChange}
                             required
-                            className='w-[381px] h-[54px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] text-[#dbcdbb]'
+                            className='w-[350px] h-[54px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] text-[#dbcdbb]'
                         />
                     </div>
                     <div>
@@ -73,14 +73,14 @@ const ContactElement = ({ details }) => {
                             // value={data.email}
                             onChange={() => HandleChange}
                             required
-                            className='w-[381px] h-[180px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] py-[18px] text-[#dbcdbb]'
+                            className='w-[350px] h-[180px] rounded-2xl bg-[#f9f9f9] stroke-[#2e2c43] outline-none px-[31px] py-[18px] text-[#dbcdbb]'
                         />
                     </div>
-                    <button className='w-[381px] h-[74px] bg-[#fb8c00] rounded-md text-white font-bold text-[18px]'>{details.submit}</button>
+                    <button className='w-[300px] md:w-[350px] h-[74px] bg-[#fb8c00] rounded-md text-white font-bold text-[18px]'>{details.submit}</button>
                 </form>
 
                 <div>
-                    <img src={details.img} alt="contact" className='w-[754px] h-[535px] scale-150' />
+                    <img src={details.img} alt="contact" className='hidden lg:flex w-[754px] h-[535px] scale-150' />
                 </div>
             </div>
         </div>

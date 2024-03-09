@@ -163,11 +163,11 @@ const Home = () => {
 
     return (
         <div className='w-screen mt-[60px]'>
-            <div className='flex ml-[197px] mr-[150px] gap-[71px] overflow-x-scroll scrollbar-hidden' ref={contentRef}>
+            <div className='flex ml-[20px] mr-[20px] mx-auto sm:ml-[50px] sm:mr-[20px] lg:ml-[197px] lg:mr-[150px] gap-[71px] overflow-x-scroll scrollbar-hidden' ref={contentRef}>
                 {scroller.map((item, index) => (
-                    <div key={index} className={`w-[545px] h-[423px] rounded-2xl flex-shrink-0 shadow-slate-600 shadow-sm  m-2 mb-10 ${activeIndex === index ? 'active' : ''}`}>
+                    <div key={index} className={`w-[320px] h-[340px] md:w-[380px] md:h-[350px] lg:w-[545px] lg:h-[423px] rounded-2xl flex-shrink-0 shadow-slate-600 shadow-sm  m-2 mb-10 ${activeIndex === index ? 'active' : ''}`}>
                         <div className='w-full flex justify-center pt-[18px]'>
-                            <img src={item.link} alt="scrollers" width="340px" height="250px" loading='lazy' />
+                            <img src={item.link} alt="scrollers" loading='lazy' className='w-[300px] h-[200px] lg:w-[340px] lg:h-[250px]' />
                         </div>
                         <div className='text-[20px] flex justify-center pt-[60px]'>{item.title}</div>
                     </div>
@@ -192,20 +192,20 @@ const Home = () => {
             </div>
 
 
-            <div className='w-full flex flex-col pl-[220px] mt-[45px]'>
+            <div className='w-full flex flex-col pl-[20px] sm:pl-[50px] lg:pl-[220px] mt-[45px]'>
                 <div className='text-[40px] font-bold '>New Locations?</div>
                 <div className='text-[16px]'>Explore the culture of your next destination</div>
             </div>
 
-            <div className='w-screen flex flex-wrap pl-[180px] gap-[20px] mt-10'>
+            <div className='w-screen flex flex-wrap pl-[20px] lg:pl-[180px] gap-[20px] mt-10 max-lg:justify-center'>
                 {
                     locations.map((item, index) => (
                         <div key={item.id} className='rounded-xl'>
-                            <img src={item.link} alt="locations" className="w-[140px] h-[140px] object-none rounded-xl" loading='lazy' />
+                            <img src={item.link} alt="locations" className="w-[100px] h-[100px] md:w-[140px] md:h-[140px] object-none rounded-xl" loading='lazy' />
                         </div>
                     ))
                 }
-                <div className='w-[140px] h-[140px] flex justify-center items-center bg-[#ddd8b1] rounded-lg font-semibold text-[20px]'>
+                <div className='w-[100px] h-[100px] md:w-[140px] md:h-[140px] flex justify-center items-center bg-[#ddd8b1] rounded-lg font-semibold text-[20px] p-2'>
                     & lot more...
                 </div>
             </div>

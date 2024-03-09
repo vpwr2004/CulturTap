@@ -4,13 +4,13 @@ import earning2 from '../../assets/earnings/earning2.svg';
 
 const Earn = () => {
     return (
-        <div className='ml-[180px] mt-[60px]'>
+        <div className='max-sm:px-[30px] max-lg:px-[50px] lg:ml-[180px] mt-[60px]'>
             <div>
                 <h2 className='text-[40px] text-[#2e2c43] font-bold'>Earn with us!</h2>
                 <p>Help others to start your earnings.  </p>
             </div>
-            <div className='flex gap-[135px] mt-[50px] items-center'>
-                <div className='scale-125'>
+            <div className='flex max-md:flex-col gap-4 md:gap-[135px] md:mt-[50px] items-center'>
+                <div className='md:scale-125'>
                     <img src={earning1} alt="logo" loading='lazy' width='324px' height='304px' />
                 </div>
                 <div className=''>
@@ -22,8 +22,8 @@ const Earn = () => {
                     <p className='text-[16px] mt-6 font-semibold text-[#2e2c43]'>Download app now to know more... </p>
                 </div>
             </div>
-            <div className='flex mt-[100px] items-center gap-[90px]'>
-                <div className='w-3/5'>
+            <div className='flex max-md:flex-col-reverse md:mt-[100px] items-center gap-[0px] md:gap-[90px]'>
+                <div className='md:w-3/5'>
                     <p className='text-[#2e2c43] text-[24px] font-bold'>Become an Immediate Local assistant :</p>
                     <p className='text-[16px]'>Be the saviour of your nearby needy tourists. Saving life is the work of God. These customised requests  and orders need <br />
                         your physical presence to the needy tourists. Sometimes requests may be normal help out but sometimes  they may be critical like an accident.  </p>
@@ -33,12 +33,12 @@ const Earn = () => {
                         Set yourself a Immediate local assistant & Earn money !</p>
                     <p className='text-[16px] mt-6 font-semibold text-[#2e2c43]'>Download app now to know more....</p>
                 </div>
-                <div className='transform scale-150'>
+                <div className='md:transform md:scale-150'>
                     <img src={earning2} alt="logo" loading='lazy' width="325px" height="304px" className='scale-125' />
                 </div>
             </div>
 
-            <div className='mt-[100px] w-10/12'>
+            <div className='mt-[30px] md:mt-[100px] md:w-10/12'>
                 <h3 className='text-[16px] font-bold text-[#ff2e00]'>Terms and Conditions:</h3>
                 <p className='text-[16px] text-[#ff2e00]'>We will deduct 20% of the amount of your earnings set. It will cover the charges of payment gateways, other taxes and charges, and small bucks for our R&D to serve you better in future.
 

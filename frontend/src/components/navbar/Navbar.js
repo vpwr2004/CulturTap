@@ -4,12 +4,16 @@ import appStore from '../../assets/navbar/appStore.svg';
 import playStore from '../../assets/navbar/playStore.svg';
 import culturTapName from '../../assets/Home/culturtap.png';
 import { Link, useLocation } from 'react-router-dom';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
+
 
 const Navbar = () => {
     // const currentURL = window.location.href;
     const [currPage, setCurrPage] = useState("home");
     const currentURLRef = useRef(window.location.href);
     const [updatedURL, setUpdatedURL] = useState(window.location.href);
+    const [isOpen, setisOpen] = useState(false);
 
     const location = useLocation();
     useEffect(() => {
@@ -36,15 +40,19 @@ const Navbar = () => {
 
     }, [updatedURL]);
 
+    const handleNav = () => {
+        setisOpen(!isOpen);
+    }
+
     return (
-        <div className='w-screen flex justify-between gap-10'>
-            <div className='pt-[14px] pl-[14px] relative '>
-                <img src={logo} alt="logo" width="102px" height="102px" />
-                <div className='absolute top-[170px] left-[8px]'>
+        <div className='w-screen flex justify-between gap-10 px-[20px] '>
+            <div className='pt-[14px] pl-[14px] relative'>
+                <img src={logo} alt="logo" className='w-[80px] h-[80px] lg:w-[102px] lg:h-[102px]' />
+                <div className='absolute max-lg:hidden top-[170px] left-[8px]'>
                     <img src={culturTapName} alt="culturTap" />
                 </div>
             </div>
-            <div className='w-[840px] flex justify-around text-[#2f2341] text-[16px]'>
+            <div className='w-[840px] hidden lg:flex justify-around text-[#2f2341] text-[16px]'>
                 <div className='w-full flex pt-[65px] gap-[40px]'>
 
 
@@ -70,9 +78,38 @@ const Navbar = () => {
                     </a>
                 </div>
             </div>
+            <div className='flex flex-col gap-1 justify-center cursor-pointer lg:hidden' onClick={handleNav}>
+                {isOpen ?
+                    (<AiOutlineClose fontSize={30} />) :
+                    (<GiHamburgerMenu fontSize={30} />)
+
+                }
+
+            </div>
+
+
+            {isOpen &&
+                <div className='w-full flex absolute top-[86px] right-[20px] justify-end '>
+                    <div className='flex flex-col gap-6 py-4 bg-white w-[150px] pb-6 items-center shadow-md shadow-slate-800 rounded-md'>
+                        <div >
+                            <Link to='/' className={`${currPage === "home" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>Home</Link>
+                        </div>
+                        <div>
+                            <Link to='/about' className={`${currPage === "about" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>About Us</Link>
+                        </div>
+                        <div >
+                            <Link to='/earn' className={`${currPage === "earn" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>Earn with us</Link>
+                        </div>
+                        <div>
+                            <Link to='/contact' className={`${currPage === "contact" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>Contact Us</Link>
+                        </div>
+                    </div>
+                </div>
+            }
 
 
         </div >
+
     )
 }
 
