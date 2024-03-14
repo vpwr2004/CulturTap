@@ -32,6 +32,9 @@ const Navbar = () => {
         else if (updatedURL.includes('contact')) {
             setCurrPage("contact");
         }
+        else if (updatedURL.includes('services')) {
+            setCurrPage("services");
+        }
         else {
             setCurrPage("home");
 
@@ -52,7 +55,7 @@ const Navbar = () => {
                     <img src={culturTapName} alt="culturTap" />
                 </div>
             </div>
-            <div className='w-[840px] hidden lg:flex justify-around text-[#2f2341] text-[16px]'>
+            <div className='w-[840px] hidden lg:flex lg:gap-4 justify-around text-[#2f2341] text-[16px]'>
                 <div className='w-full flex pt-[65px] gap-[40px]'>
 
 
@@ -61,6 +64,9 @@ const Navbar = () => {
                     </div>
                     <div className='w-[max-content]'>
                         <Link to='/about' className={`${currPage === "about" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>About Us</Link>
+                    </div>
+                    <div className='w-[max-content]'>
+                        <Link to='/services' className={`${currPage === "services" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>Services</Link>
                     </div>
                     <div className='w-[max-content]'>
                         <Link to='/earn' className={`${currPage === "earn" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`}>Earn with us</Link>
@@ -89,13 +95,16 @@ const Navbar = () => {
 
 
             {isOpen &&
-                <div className='w-full flex absolute top-[86px] right-[20px] justify-end '>
-                    <div className='flex flex-col gap-6 py-4 bg-white w-[150px] pb-6 items-center shadow-md shadow-slate-800 rounded-md'>
+                <div className='w-full flex absolute top-[120px]  justify-center '>
+                    <div className='flex flex-col gap-6 py-10 pb-10 bg-white w-2/3  items-center shadow-md shadow-slate-800 rounded-md'>
                         <div >
                             <Link to='/' className={`${currPage === "home" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>Home</Link>
                         </div>
                         <div>
                             <Link to='/about' className={`${currPage === "about" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>About Us</Link>
+                        </div>
+                        <div>
+                            <Link to='/services' className={`${currPage === "services" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>Services</Link>
                         </div>
                         <div >
                             <Link to='/earn' className={`${currPage === "earn" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>Earn with us</Link>

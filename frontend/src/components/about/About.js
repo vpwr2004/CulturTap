@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import service1 from '../../assets/about/service1.svg';
 import service2 from '../../assets/about/service2.svg';
 import service4 from '../../assets/about/service4.svg';
@@ -7,9 +7,13 @@ import service2modal from '../../assets/about/service2modal.svg';
 import service3modal from '../../assets/about/service3modal.svg';
 import ServicesModal from './ServicesModal';
 import Modal from '../utils/Modal';
+import { useLocation } from 'react-router-dom';
+
 const About = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [modalData, setModalData] = useState({});
+
+    const location = useLocation();
 
     const openModal = () => {
         setIsOpen(true);
@@ -19,6 +23,30 @@ const About = () => {
         setIsOpen(false);
     };
 
+    // useEffect(() => {
+    //     if (location.pathname === '/services') {
+    //         window.scrollTo({
+    //             top: 600,
+    //             behavior: 'smooth'
+    //         });
+    //     }
+    // }, [location.pathname]);
+
+    useEffect(() => {
+        let scrollPosition = 780; // Default scroll position for small screens
+        if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+            scrollPosition = 640; // Medium screens
+        } else if (window.innerWidth >= 1024) {
+            scrollPosition = 500; // Large screens
+        }
+
+        if (location.pathname === '/services') {
+            window.scrollTo({
+                top: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+    }, [location.pathname]);
     const services = [
         {
             id: 1,
