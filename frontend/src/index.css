@@ -19,6 +19,9 @@ body {
 
 }
 
+.heading-color{
+  color:#001b33;
+}
 .bullet-points {
   width: full;
   display: flex;

@@ -1,12 +1,13 @@
 import React from 'react';
 import earning1 from '../../assets/earnings/earning1.svg';
 import earning2 from '../../assets/earnings/earning2.svg';
+import '../../index.css';
 
 const Earn = () => {
     return (
         <div className='max-sm:px-[30px] max-lg:px-[50px] lg:ml-[180px] mt-[60px]'>
             <div>
-                <h2 className='text-[40px] text-[#2e2c43] font-bold'>Earn with us!</h2>
+                <h2 className='text-[40px] heading-color font-bold'>Earn with us!</h2>
                 <p>Help others to start your earnings.  </p>
             </div>
             <div className='flex max-md:flex-col gap-4 md:gap-[135px] md:mt-[50px] items-center'>
@@ -14,7 +15,7 @@ const Earn = () => {
                     <img src={earning1} alt="logo" loading='lazy' width='324px' height='304px' />
                 </div>
                 <div className=''>
-                    <h2 className='text-[24px] font-bold text-[#2e2c43]'>Become a Trip Planner :</h2>
+                    <h2 className='text-[24px] font-bold heading-color'>Become a Trip Planner :</h2>
                     <p className='text-[16px]'>Accept trip planning calls for your expert regions to earn.</p>
                     <p className='text-[16px] mt-6'>Your unique way of exploring the locations & unique stories will help tourists to identify you from the crowd. <br /> Connect with tourists and help them to plan their upcoming limited-day tours better. You will earn money <br /> for 20 min of professional Trip Planning Call. </p>
                     <p className='text-[16px] mt-6'>
@@ -24,7 +25,7 @@ const Earn = () => {
             </div>
             <div className='flex max-md:flex-col-reverse md:mt-[100px] items-center gap-[0px] md:gap-[90px]'>
                 <div className='md:w-3/5'>
-                    <p className='text-[#2e2c43] text-[24px] font-bold'>Become an Immediate Local assistant :</p>
+                    <p className='heading-color text-[24px] font-bold'>Become an Immediate Local assistant :</p>
                     <p className='text-[16px]'>Be the saviour of your nearby needy tourists. Saving life is the work of God. These customised requests  and orders need <br />
                         your physical presence to the needy tourists. Sometimes requests may be normal help out but sometimes  they may be critical like an accident.  </p>
                     <p className='text-[16px] mt-6'>You will earn money for helping out tourists properly within your presence. </p>

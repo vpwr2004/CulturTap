@@ -8,6 +8,7 @@ import service3modal from '../../assets/about/service3modal.svg';
 import ServicesModal from './ServicesModal';
 import Modal from '../utils/Modal';
 import { useLocation } from 'react-router-dom';
+import '../../index.css';
 
 const About = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,14 +24,7 @@ const About = () => {
         setIsOpen(false);
     };
 
-    // useEffect(() => {
-    //     if (location.pathname === '/services') {
-    //         window.scrollTo({
-    //             top: 600,
-    //             behavior: 'smooth'
-    //         });
-    //     }
-    // }, [location.pathname]);
+
 
     useEffect(() => {
         let scrollPosition = 780; // Default scroll position for small screens
@@ -77,7 +71,7 @@ const About = () => {
     return (
         <div className='max-lg:px-[50px] mx-auto lg:ml-[180px] mt-[20px]'>
             <div className='lg:mr-[186px]'>
-                <h2 className='text-[40px] font-bold '>About Us</h2>
+                <h2 className='text-[40px] font-bold heading-color'>About Us</h2>
                 <p className='text-[16px] mt-[43px]'>Culturtap is a travel based community app that aims to make your travel easier by providing real-time updates and connecting you with people whenever you need help to makes your travel easier, safer and enjoyable.
                 </p>
                 <p className='text-[16px] mt-[25px]'>
@@ -93,7 +87,7 @@ const About = () => {
 
             }
             <div className='mt-[76px]'>
-                <h2 className='text-[40px] font-bold '>Services</h2>
+                <h2 className='text-[40px] font-bold heading-color'>Services</h2>
                 <p className=''>We offered services related to tour planning & tourist safety. </p>
                 <div className='flex max-md:flex-col max-md:items-center mt-[44px] gap-[25px]'>
 
@@ -102,7 +96,7 @@ const About = () => {
                             return (
                                 <div key={service.id} className='w-[325px] h-[505px] rounded-3xl shadow-md'>
                                     <img src={service.link} alt="services" className="object-none rounded-t-3xl" />
-                                    <h3 className='w-3/5 mt-[35px] flex text-[20px] mx-auto justify-center text-center font-bold '>{service.title}</h3>
+                                    <h3 className='w-3/5 mt-[35px] flex heading-color text-[20px] mx-auto justify-center text-center font-bold '>{service.title}</h3>
                                     <p onClick={() => { openModal(); setModalData(service); }} className='w-[max-content] mx-auto justify-center cursor-pointer mt-[31px] text-[16px] text-[#fbbc00] border-b-2 border-[#fbbc00] pb-1'>Know more</p>
                                     {/* {console.log('servidceee', service)}; */}
                                     {/* <ServicesModal isOpen={isOpen} onClose={closeModal} service={service} /> */}
@@ -113,7 +107,7 @@ const About = () => {
                     }
 
                     <div>
-                        <p className='text-[20px] font-bold'>More opportunities for <br />
+                        <p className='text-[20px] heading-color font-bold'>More opportunities for <br />
                             ground audience.</p>
                         <p className='text-[16px] mt-[17px]'>We are dedicate to serve humanity <br />
                             better and make this earth a better <br />
