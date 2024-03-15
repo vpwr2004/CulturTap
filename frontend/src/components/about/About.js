@@ -79,7 +79,7 @@ const About = () => {
                     Plan better - explore more!
                 </p>
                 <p className='text-[16px] mt-[25px]'>
-                    Choose your destinations, CulturTap presents  you the real-time updates, including popular visits, top-rated restaurants, trending locations, outskirts, traditional fashion, nearby pubs and cafes, street food, historical heritage, festivals, handy crafts, service shops and business shops etc.
+                    Choose your destinations, CulturTap presents you the real-time updates, including popular visits, top-rated restaurants, trending locations, outskirts, traditional fashion, nearby pubs and cafes, street food, historical heritage, festivals, handy crafts, service shops and business shops etc.
                 </p>
             </div>
             {
