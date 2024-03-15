@@ -12,7 +12,7 @@ const Footer = () => {
 
     return (
         <div className='w-[100%] flex max-lg:flex-col  max-lg:items-center lg:justify-between lg:pl-[180px] lg:pr-[150px] mt-[50px] pb-[30px] pt-[30px] bg-[#f5f5f5]'>
-            <div className='w-full lg:w-1/2 flex max-sm:flex-col max-sm:items-center  max-sm:gap-4 lg:justify-between justify-evenly'>
+            <div className='w-full lg:w-1/2 flex max-sm:flex-col max-sm:pl-[50px]  max-sm:gap-4 lg:justify-between justify-evenly'>
                 <div className=''>
                     <p>@2024 All rights reserved to </p>
                     <p> CulturTap Tourism Indai Pvt. Ltd.</p>
