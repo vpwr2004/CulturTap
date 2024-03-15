@@ -18,7 +18,9 @@ const ContactElement = ({ details }) => {
     const HandleSubmit = async (e) => {
         e.preventDefault();
         console.log(data);
-        const res = await axios.post(``)
+        // const res = await axios.post(``);
+
+        setData({ name: "", countryCode: "", mobileNo: "", email: "", concern: "" });
     }
 
     return (
