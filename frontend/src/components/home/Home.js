@@ -167,7 +167,7 @@ const Home = () => {
                 {scroller.map((item, index) => (
                     <div key={index} className={`w-[320px] h-[340px] md:w-[380px] md:h-[350px] lg:w-[545px] lg:h-[423px] rounded-2xl flex-shrink-0 shadow-slate-600 shadow-sm  m-2 mb-10 ${activeIndex === index ? 'active' : ''}`}>
                         <div className='w-full flex justify-center pt-[18px]'>
-                            <img src={item.link} alt="scrollers" loading='lazy' className='w-[300px] h-[200px] lg:w-[340px] lg:h-[250px]' />
+                            <img src={item.link} alt="scrollers" loading='lazy' className='w-[300px] h-[200px] lg:w-[340px] lg:h-[250px] scale-105' />
                         </div>
                         <div className='text-[20px] flex justify-center pt-[60px]'>{item.title}</div>
                     </div>

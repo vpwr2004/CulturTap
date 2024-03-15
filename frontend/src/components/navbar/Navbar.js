@@ -95,7 +95,7 @@ const Navbar = () => {
 
 
             {isOpen &&
-                <div className='w-full flex absolute top-[120px]  justify-center '>
+                <div className='w-full flex absolute top-[120px]  justify-center z-50'>
                     <div className='flex flex-col gap-6 py-10 pb-10 bg-white w-2/3  items-center shadow-md shadow-slate-800 rounded-md'>
                         <div >
                             <Link to='/' className={`${currPage === "home" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>Home</Link>
