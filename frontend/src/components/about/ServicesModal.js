@@ -3,7 +3,7 @@ import Modal from '../utils/Modal'
 import appStore from '../../assets/navbar/appStore.svg';
 import playStore from '../../assets/navbar/playStore.svg';
 const ServicesModal = ({ isOpen, onClose, service }) => {
-    console.log("service", service);
+    // console.log("service", service);
     return (
         <Modal isOpen={isOpen} onClose={onClose}>
             <div className='max-sm:w-[380px] max-sm:h-[620px] w-[629px] h-[570px] overflow-hidden rounded-2xl'>
