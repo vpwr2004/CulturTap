@@ -23,7 +23,7 @@ const ContactElement = ({ details }) => {
     }
 
     return (
-        <div className='max-lg:pl-[20px] lg:ml-[180px] mt-[66px]'>
+        <div className='max-lg:pl-[20px] lg:ml-[180px] md:mt-[66px] max-sm:pt-[100px]'>
             <div>
                 <h2 className='text-[40px] heading-color font-bold  max-sm:text-[28px]'>{details.type}</h2>
                 <p className='text-[16px] text-[#001b33]'>{details.title}</p>
@@ -93,7 +93,7 @@ const ContactElement = ({ details }) => {
                 </form>
 
                 <div>
-                    <img src={details.img} alt="contact" className='flex  w-[754px] h-[535px] scale-150' />
+                    <img src={details.img} alt="contact" className='flex  w-[754px] h-[535px] scale-150  max-sm:hidden' />
                 </div>
             </div>
         </div>

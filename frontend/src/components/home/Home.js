@@ -162,7 +162,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className='w-screen mt-[60px]'>
+        <div className='w-screen md:mt-[60px] max-sm:pt-[100px] -z-50'>
             <div className='flex ml-[10px] mr-[10px] mx-auto sm:ml-[50px] sm:mr-[20px] lg:ml-[197px] lg:mr-[150px] gap-[71px] overflow-x-scroll scrollbar-hidden' ref={contentRef}>
                 {scroller.map((item, index) => (
                     <div key={index} className={`w-[320px] h-[340px] md:w-[380px] md:h-[350px] lg:w-[545px] lg:h-[423px] rounded-2xl flex-shrink-0 md:shadow-slate-600 shadow-sm  m-2 mb-10 ${activeIndex === index ? 'active' : ''}`}>

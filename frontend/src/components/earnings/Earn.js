@@ -5,7 +5,7 @@ import '../../index.css';
 
 const Earn = () => {
     return (
-        <div className='max-sm:px-[30px] max-lg:px-[50px] lg:ml-[180px] mt-[60px]'>
+        <div className='max-sm:px-[30px] max-lg:px-[50px] lg:ml-[180px] md:mt-[60px] max-sm:pt-[100px]'>
             <div>
                 <h2 className='text-[40px] heading-color font-bold  max-sm:text-[28px]'>Earn with us!</h2>
                 <p>Help others to start your earnings.  </p>
