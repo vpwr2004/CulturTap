@@ -48,7 +48,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className='w-screen max-sm:fixed  flex justify-between gap-10 md:px-[20px] max-sm:mt-0 max-sm:pb-[20px]  max-sm:pr-[30px] bg-white '>
+        <div className='w-screen max-sm:fixed max-sm:top-0 flex justify-between gap-10 md:px-[20px] max-sm:mt-0 max-sm:pb-[20px]  max-sm:pr-[30px] bg-white z-50'>
             <div className='pt-[14px] md:pl-[14px] max-sm:pl-[30px] relative'>
                 <img src={logo} alt="logo" className=' w-[50px] h-[50px] lg:w-[102px] lg:h-[102px]' />
                 <div className='absolute max-lg:hidden top-[170px] left-[8px]'>
