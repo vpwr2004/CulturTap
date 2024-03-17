@@ -48,8 +48,8 @@ const Navbar = () => {
     }
 
     return (
-        <div className='w-screen flex justify-between gap-10 px-[20px] max-sm:pl-[0px]'>
-            <div className='pt-[14px] pl-[14px] relative'>
+        <div className='w-screen flex justify-between gap-10 md:px-[20px]  max-sm:pr-[30px]'>
+            <div className='pt-[14px] md:pl-[14px] max-sm:pl-[30px] relative'>
                 <img src={logo} alt="logo" className=' w-[50px] h-[50px] lg:w-[102px] lg:h-[102px]' />
                 <div className='absolute max-lg:hidden top-[170px] left-[8px]'>
                     <img src={culturTapName} alt="culturTap" />
@@ -95,8 +95,8 @@ const Navbar = () => {
 
 
             {isOpen &&
-                <div className='w-full flex absolute top-[80px]  justify-center z-50'>
-                    <div className='flex flex-col gap-6 py-10 pb-10 bg-white w-11/12 h-screen  items-center shadow-md  rounded-md'>
+                <div className='w-full flex fixed top-[80px]  justify-center z-50'>
+                    <div className='flex flex-col gap-6 py-10 pb-10 bg-white w-full  h-screen text-[18px]  items-center shadow-md  rounded-md'>
                         <div >
                             <Link to='/' className={`${currPage === "home" ? "font-bold border-b-4 pb-3 border-[#fb8c00]" : ""}`} onClick={handleNav}>Home</Link>
                         </div>
