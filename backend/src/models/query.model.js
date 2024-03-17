@@ -26,4 +26,4 @@ const QuerySchema = new Schema({
 
 });
 
-const Query = mongoose.model("Query", QuerySchema);
+export const Query = mongoose.model("Query", QuerySchema);

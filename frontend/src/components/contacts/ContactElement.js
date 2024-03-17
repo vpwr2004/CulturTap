@@ -11,7 +11,6 @@ const ContactElement = ({ details }) => {
     });
 
     const HandleChange = (e) => {
-        console.log(e.target.name, e.target.value);
         setData(prev => ({ ...prev, [e.target.name]: e.target.value }));
     }
 
