@@ -25,7 +25,7 @@ const ContactElement = ({ details }) => {
     return (
         <div className='max-lg:pl-[20px] lg:ml-[180px] mt-[66px]'>
             <div>
-                <h2 className='text-[40px] heading-color font-bold'>{details.type}</h2>
+                <h2 className='text-[40px] heading-color font-bold  max-sm:text-[28px]'>{details.type}</h2>
                 <p className='text-[16px] text-[#001b33]'>{details.title}</p>
             </div>
 
